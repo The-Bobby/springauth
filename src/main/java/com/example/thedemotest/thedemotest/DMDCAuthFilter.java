@@ -1,19 +1,11 @@
 package com.example.thedemotest.thedemotest;
 
 import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.security.authentication.AuthenticationDetailsSource;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
 import org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter;
 
 public class DMDCAuthFilter extends RequestHeaderAuthenticationFilter {
 
-    private String principalRequestHeader;
     public DMDCAuthFilter() {
-    }
-    public DMDCAuthFilter(String principalRequestHeader) {
-        this.principalRequestHeader = principalRequestHeader;
     }
 
     @Override
